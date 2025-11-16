@@ -175,6 +175,8 @@ void zerr(int ret)
 /* compress or decompress from stdin to stdout */
 int main(int argc, char **argv)
 {
+    printf("Compiled with zlib version: %s\n", ZLIB_VERSION);
+    printf("Linked zlib runtime version: %s\n", zlibVersion());
     int ret;
 
     /* avoid end-of-line conversions */
